@@ -1,0 +1,17 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="credit_form_sale_view">
+            <field name="name">credit_inherit_form_with_button</field>
+            <field name="model">credit</field>
+            <field name="inherit_id" ref="allocation_of_credit_amount.credit_form_view"/>
+            <field name="arch" type="xml">
+                <!-- Agregar un botón al encabezado del formulario -->
+                <xpath expr="//header" position="inside">
+                    <button name="boton_publicar" type="object" string="Publicar" class="btn-primary"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
